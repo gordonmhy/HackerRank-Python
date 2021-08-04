@@ -9,25 +9,17 @@ def print_rangoli(size):
     def get_line(line_num, i=0):
         if line_num == i + 1:
             return alphabets[size - i]
-        return alphabets[size - i] + '-' + get_line(line_num, i + 1) + '-' + alphabets[size - i]
+        return '{0}-{1}-{0}'.format(alphabets[size - i], get_line(line_num, i + 1))
 
     length = len(get_line(size))
 
-    # Pad each line of the Rangoli with '-'
-    def pad(line):
-        result = line
-        while len(result) < length:
-            result = '-' + result + '-'
-        return result
-
     # Recursively print the lines of the Rangoli
     def print_result(n):
-        if n == 1:
-            print(pad(get_line(size - n + 1)))
-        else:
-            print(pad(get_line(size - n + 1)))
+        line = get_line(size - n + 1).center(length, '-')
+        print(line)
+        if n != 1:
             print_result(n - 1)
-            print(pad(get_line(size - n + 1)))
+            print(line)
 
     print_result(size)
 
