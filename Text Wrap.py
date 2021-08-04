@@ -1,7 +1,4 @@
-# String Formatting
-# Input: string and max_width (int)
-# Output: String broken into more lines where
-# the length of each line equals max_width
+# Text Wrap
 
 # Recursively splits the string into blocks of
 # strings of width 'max_width'

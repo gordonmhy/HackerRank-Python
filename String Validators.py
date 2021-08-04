@@ -1,9 +1,4 @@
-# String Formatting
-# Input: string where 0 < len(string) < 1000
-# Output: Print True in each line if string has any
-# alphanumeric characters, alphabetical characters,
-# digits, lowercase characters and uppercase characters
-# respectively.
+# String Validators
 
 
 if __name__ == '__main__':
